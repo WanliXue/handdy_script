@@ -13,10 +13,10 @@ def generate_qrcode(data):
         border=4,)
     qr.add_data(data)
     qr.make(fit=True)
-image = qr.make_image(fill_color="black", back_color="white")
+    image = qr.make_image(fill_color="black", back_color="white")
     image.save("qrcode.png")
 def Decode_Qrcode(file_name):
     result = decode(Image.open(file_name))
     print("Data:", result[0][0].decode())
-generate_qrcode("This is Medium Article By Haider")
+generate_qrcode("https://github.com/WanliXue/handdy_script")
 Decode_Qrcode("qrcode.png")
