@@ -17,6 +17,9 @@ def generate_qrcode(data):
     image.save("qrcode.png")
 def Decode_Qrcode(file_name):
     result = decode(Image.open(file_name))
+    print(result)
     print("Data:", result[0][0].decode())
 generate_qrcode("https://github.com/WanliXue/handdy_script")
 Decode_Qrcode("qrcode.png")
+
+
